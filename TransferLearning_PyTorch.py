@@ -127,4 +127,4 @@ with torch.no_grad():
     out = myvgg(img)
     _, out_idx = torch.max(out, 1)
     correct += (label == out_idx).sum().item()
-print('Val acc: ', correct / len(testdata))
+print('Test acc: ', correct / len(testdata))
